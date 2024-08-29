@@ -1,14 +1,31 @@
 {
-  "name": "task_dome",
+  "name": "smart-task",
   "version": "1.0.0",
-  "description": "一个前端任务管理器",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "An intelligent task queue manager",
+  "private": false,
+  "main": "built/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jizai1125/joker1125-utils.git"
   },
-  "author": "alaia",
-  "license": "ISC",
+  "keywords": [
+    "task",
+    "task-manager",
+    "task-queue"
+  ],
+  "scripts": {
+    "build": "tsc --build .",
+    "dev": "npx tsc --watch",
+    "test": "pnpm run build && node ./built/index.js"
+  },
+  "files": [
+    "src/",
+    "LICENSE",
+    "README.md"
+  ],
+  "author": "Alaia",
+  "license": "MIT",
   "dependencies": {
-    "typescript": "^4.6.2"
+    "typescript": "^5.5.4"
   }
 }

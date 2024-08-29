@@ -1,13 +1,41 @@
-# 手写任务管理器
+# smart-task
 
-### 使用语言
-Typescript 3.1
+## introduction
 
-### 完成效果
-完成对任务、任务管理器的封装，可以进行开始、暂停、恢复、关闭
+A task queue that is simple and easy to use, use Typescript wirte, full encapsulation of tasks and task managers, so you can start, pause, resume and close them.
 
-### ts开启实时编译
-npx tsc --watch
+## usage
 
-### node编译
-./built/index.js
+~~~ javascript
+import { CommonTaskImpl } from "./lifecycle/CommonTaskImpl";
+import { TaskManager } from "./lifecycle/TaskManager";
+
+const taskList: CommonTaskImpl[] = []
+
+const task = new CommonTaskImpl(() => {
+    console.log(1 + 1);
+});
+
+const task2 = new CommonTaskImpl(() => {
+    console.log(1 + 2);
+});
+
+const task3 = new CommonTaskImpl(() => {
+    console.log(1 + 3);
+});
+
+
+taskList.push(task)
+taskList.push(task2)
+taskList.push(task3)
+
+const taskMsg = new TaskManager(taskList)
+
+taskMsg.start()
+taskMsg.pause()
+
+setTimeout(() => {
+    taskMsg.resume()
+}, 3000);
+
+~~~
