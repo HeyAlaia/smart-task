@@ -6,7 +6,7 @@
   "main": "built/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jizai1125/joker1125-utils.git"
+    "url": "git+https://github.com/HeyAlaia/smart-task.git"
   },
   "keywords": [
     "task",
@@ -27,5 +27,9 @@
   "license": "MIT",
   "dependencies": {
     "typescript": "^5.5.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/HeyAlaia/smart-task.git/issues"
+  },
+  "homepage": "https://github.com/HeyAlaia/smart-task.git#readme"
 }
