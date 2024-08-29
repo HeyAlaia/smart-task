@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "outDir": "./built",
-        "target": "ES5", // 目标语言的版本
+        "target": "ES5",
         "lib": [
             "ES6",
             "DOM",
